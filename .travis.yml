@@ -1,0 +1,15 @@
+language: objective-c
+env:
+  matrix:
+    - VERSION=
+    - VERSION="--HEAD"
+before_install:
+  - brew update
+install:
+  - mkdir -vp $(brew --repo)/Library/Taps/threadwaste
+  - ln -s "${TRAVIS_BUILD_DIR}" $(brew --repo)/Library/Taps/threadwaste/homebrew-finto
+script:
+  - brew install --verbose ${VERSION} finto
+  - brew audit --strict finto
+  - brew test finto
+  - finto --version
