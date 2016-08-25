@@ -1,5 +1,7 @@
 # homebrew-finto
 
+[![Build Status](https://travis-ci.org/threadwaste/homebrew-finto.svg?branch=master)](https://travis-ci.org/threadwaste/homebrew-finto)
+
 Formula for [finto](https://github.com/threadwaste/finto).
 
 ## Install
